@@ -1,5 +1,5 @@
 use std:: collections::HashMap;
-
+#[allow(dead_code)]
 pub fn top_k_freq_elements(nums: Vec<i32>, k: i32)
  -> Vec<i32>
 {

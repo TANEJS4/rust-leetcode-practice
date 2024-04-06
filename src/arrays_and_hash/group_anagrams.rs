@@ -1,5 +1,5 @@
 use std::collections::HashMap;
-
+#[allow(dead_code)]
 pub fn group_anagrams(strs: Vec<String>) 
 // ->HashMap<String, Vec<String>> 
 -> Vec<Vec<String>>

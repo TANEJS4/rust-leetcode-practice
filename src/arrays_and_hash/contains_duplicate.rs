@@ -1,4 +1,5 @@
 use std::collections::HashMap;
+#[allow(dead_code)]
 pub fn contains_duplicate(nums: Vec<i32>) -> bool 
 {
     let mut counter = HashMap::<i32,i32>::new();

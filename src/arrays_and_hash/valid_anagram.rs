@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub fn valid_anagram(s: String, t: String) -> bool
 {
     //create vec out of string
