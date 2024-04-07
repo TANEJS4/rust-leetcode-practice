@@ -7,3 +7,6 @@ make-pub-rust:
 	@echo  '{'>> src/arrays_and_hash/$(mod).rs
 	@echo  ''>> src/arrays_and_hash/$(mod).rs
 	@echo  '}' >> src/arrays_and_hash/$(mod).rs
+
+update-md:
+	@echo -e '\n- $(mod)' >> readme.md
