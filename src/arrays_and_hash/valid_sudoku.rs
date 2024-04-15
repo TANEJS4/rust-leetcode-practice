@@ -1,5 +1,13 @@
 use std::collections::HashSet;
+#[allow(dead_code)]
+fn check_in_hash(hash: &HashSet<(u32, u32)>, number: (u32, u32)) -> bool {
+    if hash.contains(&number) {
+        return true;
+    }
+    return false;
+}
 
+#[allow(dead_code)]
 pub fn valid_sudoku(board: Vec<Vec<char>>) -> bool {
     let mut row_hash = HashSet::<(u32, u32)>::with_capacity(9);
     let mut col_hash = HashSet::<(u32, u32)>::with_capacity(9);
@@ -30,7 +38,7 @@ pub fn valid_sudoku(board: Vec<Vec<char>>) -> bool {
                 //  so we divide rows and columns by 3 each and multiply one of them with 3 coz i consider the vec<hashset>
                 // as  flattened matrix. for 3* (row/3) +(col/3)
                 //* check in box_hash
-                if (box_hash[3 * (row_idx / 3) + (col_idx / 3)].contains(&digit)) {
+                if box_hash[3 * (row_idx / 3) + (col_idx / 3)].contains(&digit) {
                     println!("box hash is false" );
                     return false;
                 } else {
@@ -40,11 +48,4 @@ pub fn valid_sudoku(board: Vec<Vec<char>>) -> bool {
         }
     }
     return true;
-}
-
-fn check_in_hash(hash: &HashSet<(u32, u32)>, number: (u32, u32)) -> bool {
-    if hash.contains(&number) {
-        return true;
-    }
-    return false;
 }

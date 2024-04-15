@@ -16,6 +16,6 @@ pub fn top_k_freq_elements(nums: Vec<i32>, k: i32)
     }
     let mut freq_vec = freq.iter().collect::<Vec<(&i32,&i32)>>();
     freq_vec.sort_by(|a, b| b.1.cmp(a.1)) ;
-    let res: Vec<i32> =  freq_vec.iter().map(|(k,v)| **k).collect();
+    let res: Vec<i32> =  freq_vec.iter().map(|(k,_v)| **k).collect();
     return res[0..usize::try_from(k).unwrap()].to_vec();  
 }

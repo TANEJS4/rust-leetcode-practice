@@ -1,5 +1,3 @@
-use std::iter::Product;
-
 #[allow(dead_code)]
 pub fn product_except_self(nums: Vec<i32>) -> Vec<i32> {
     //* count zeros

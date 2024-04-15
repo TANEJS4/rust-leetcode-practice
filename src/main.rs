@@ -1,80 +1,20 @@
 mod arrays_and_hash;
-
+mod two_pointer;
 fn main() {
-    // print!("{:}", 8/3)
-    test_longest_consecutive()
-}
-#[allow(dead_code)]
-fn test_longest_consecutive(){
-    use arrays_and_hash::longest_consecutive::longest_consecutive;
-    assert_eq!(6, longest_consecutive(vec![100,4,200,1,3,2, 6,7,8,9,10,11]));
-    assert_eq!(4, longest_consecutive(vec![100,1,2,3,50,4]));
-    assert_eq!(1,longest_consecutive(vec![1]));
-    assert_eq!(0,longest_consecutive(vec![]));
-    assert_eq!(9,longest_consecutive(vec![0, 3,7,2,5,8,4,6,0,1]));
-    assert_eq!(3,longest_consecutive(vec![1,2,0,1]));
-    assert_eq!(1,longest_consecutive(vec![0,0]));
-    }
-#[allow(dead_code)]
-fn test_valid_sudoku() {
-    use arrays_and_hash::valid_sudoku::valid_sudoku;
+    use two_pointer::three_sum::three_sum;
+    // assert_eq!(vec![vec![-1,-1,2],vec![0,-1,1]], three_sum(vec![-1,0,1,2,-1,-4]));
+    // println!("{:?}", three_sum(vec![-2,0,1,1,2]));
+    // println!("{:?}", three_sum(vec![-1,0,1,2,-1,-4]));
+    // println!("answe {:?}", three_sum(vec![-1,0,1,2,-1,-4,-2,-3,3,0,4]));
     println!(
-        "{:?}",
-        valid_sudoku(vec![
-            vec!['.', '8', '7', '6', '5', '4', '3', '2', '1'],
-            vec!['2', '.', '.', '.', '.', '.', '.', '.', '.'],
-            vec!['3', '.', '.', '.', '.', '.', '.', '.', '.'],
-            vec!['4', '.', '.', '.', '.', '.', '.', '.', '.'],
-            vec!['5', '.', '.', '.', '.', '.', '.', '.', '.'],
-            vec!['6', '.', '.', '.', '.', '.', '.', '.', '.'],
-            vec!['7', '.', '.', '.', '.', '.', '.', '.', '.'],
-            vec!['8', '.', '.', '.', '.', '.', '.', '.', '.'],
-            vec!['9', '.', '.', '.', '.', '.', '.', '.', '.']
+        "answe {:?}",
+        three_sum(vec![
+            14, 4, 6, -1, 10, 9, -8, 7, -13, 14, -13, -11, -8, -9, 11, 14, -8, -14, -13, 7, -10,
+            -15, -13, -11, -11, 11, 14, 13, 2, -14, 1, -7, -2, 14, -1, -15, 9, 7, -1, 3, 6, 1, 7,
+            5, -1, -5, 4, -2, -4, -1, -9, -7, -1, -7, -11, 3, 12, 10, -7, -1, 12, 1, 8, -13, 1, 14,
+            9, -13, 6, -7, -3, -11, 2, -11, 10, -14, -1, -9, 0, 2, 5, 6, 3, -11, 6, 7, 0, 3, 3, 0,
+            -12, -8, -13, 3, -14, -5, 2, 10, -11, -14, -12, 1, -10, 5, 5, 7, -1, 11, 14, 6, -10,
+            -4, -3, 8, -7, 10, 1, 8, -1, -11, -15, -6, -12, -13, 12, -11
         ])
-    )
-}
-
-#[allow(dead_code)]
-fn test_product_except_self() {
-    use arrays_and_hash::product_except_self::product_except_self;
-    println!("{:?}", product_except_self(vec![1, 2, 3, 4]));
-}
-#[allow(dead_code)]
-fn test_top_k_freq_elements() {
-    use arrays_and_hash::top_k_freq_elements::top_k_freq_elements;
-    println!("{:?}", top_k_freq_elements(vec![1, 2, 4, 4, 2, 4, 5, 1], 2));
-}
-#[allow(dead_code)]
-fn test_contains_duplicate() {
-    use arrays_and_hash::contains_duplicate::contains_duplicate;
-    let input = vec![1, 2, 3, 1];
-    println!("{:?}", contains_duplicate(input));
-}
-#[allow(dead_code)]
-fn test_group_anagrams() {
-    use arrays_and_hash::group_anagrams::group_anagrams;
-    println!(
-        "{:?}",
-        group_anagrams(vec![
-            "eat".to_string(),
-            "tea".to_string(),
-            "tan".to_string(),
-            "ate".to_string(),
-            "nat".to_string(),
-            "bat".to_string()
-        ])
-    )
-}
-#[allow(dead_code)]
-fn test_valid_anagram() {
-    use arrays_and_hash::valid_anagram::valid_anagram;
-    println!(
-        "{:?}",
-        valid_anagram("hello".to_string(), "world".to_string())
     );
-}
-#[allow(dead_code)]
-fn test_two_sum() {
-    use arrays_and_hash::twosum::two_sum;
-    println!("{:?}", two_sum(vec![3, 2, 4], 6))
 }
