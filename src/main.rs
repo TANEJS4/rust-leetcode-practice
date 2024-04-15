@@ -2,8 +2,19 @@ mod arrays_and_hash;
 
 fn main() {
     // print!("{:}", 8/3)
-    test_valid_sudoku()
+    test_longest_consecutive()
 }
+#[allow(dead_code)]
+fn test_longest_consecutive(){
+    use arrays_and_hash::longest_consecutive::longest_consecutive;
+    assert_eq!(6, longest_consecutive(vec![100,4,200,1,3,2, 6,7,8,9,10,11]));
+    assert_eq!(4, longest_consecutive(vec![100,1,2,3,50,4]));
+    assert_eq!(1,longest_consecutive(vec![1]));
+    assert_eq!(0,longest_consecutive(vec![]));
+    assert_eq!(9,longest_consecutive(vec![0, 3,7,2,5,8,4,6,0,1]));
+    assert_eq!(3,longest_consecutive(vec![1,2,0,1]));
+    assert_eq!(1,longest_consecutive(vec![0,0]));
+    }
 #[allow(dead_code)]
 fn test_valid_sudoku() {
     use arrays_and_hash::valid_sudoku::valid_sudoku;
