@@ -1,4 +1,7 @@
+
+use std::env;
 mod binary_search; 
 fn main() {
-	use binary_search::min_eating_speed::min_eating_speed;
+    env::set_var("RUST_BACKTRACE", "1");
+
 }

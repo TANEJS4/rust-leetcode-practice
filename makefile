@@ -24,4 +24,4 @@ add-test:
 	echo -e "use leetcode::$(package);" >> tests/test_$(package).rs
 	
 run:
-	clear && cargo run
+	clear && timeout ${timeout} cargo run
