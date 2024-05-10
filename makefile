@@ -13,7 +13,7 @@ add-module: add-to-main
 	echo -e "use stack::valid_parentheses::valid_parentheses"
 
 add-to-main: make-rust-test
-	echo -e "use $(package)::$(mod)::$(mod)" >> src/main.rs
+	echo -e "use $(package)::$(mod)::$(mod);" >> src/main.rs
 make-rust-test: 
 	@echo -e '\n\n#[test]\nfn test_$(mod)(){\n\tuse $(package)::$(mod)::$(mod);\n\t\n} ' >> tests/test_$(package).rs
 

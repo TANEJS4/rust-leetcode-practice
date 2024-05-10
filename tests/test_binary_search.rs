@@ -32,3 +32,10 @@ fn test_min_eating_speed(){
     assert_eq!(3,min_eating_speed(vec![805306368,805306368,805306368], 1000000000));
     assert_eq!(2,min_eating_speed(vec![312884470], 312884469));
 } 
+
+
+#[test]
+fn test_find_min(){
+	use binary_search::find_min::find_min;
+	
+} 
