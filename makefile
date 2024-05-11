@@ -1,3 +1,5 @@
+
+.PHONY: run
 create-package: 
 	mkdir src/$(package)
 	echo -e "\npub mod $(package);" >> src/lib.rs
@@ -22,6 +24,11 @@ update-md:
 
 add-test:
 	echo -e "use leetcode::$(package);" >> tests/test_$(package).rs
-	
+test:
+	echo $1
 run:
-	clear && timeout ${timeout} cargo run
+	if [ -z "$(timeout)" ]; then \
+		clear && cargo run; \
+	else \
+		clear && timeout $(timeout) cargo run; \
+	fi\
